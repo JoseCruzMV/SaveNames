@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/saveScreen">
+
+    <fragment
+        android:id="@+id/saveScreen"
+        android:name="com.example.savenames.ui.savename.SaveFragment"
+        android:label="@string/save_screen_title" >
+        <action
+            android:id="@+id/fromSaveToRoster"
+            app:destination="@id/rosterScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/rosterScreen"
+        android:name="com.example.savenames.ui.rosternames.RosterFragment"
+        android:label="@string/roster_screen_title" />
+</navigation>

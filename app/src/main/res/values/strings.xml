@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SaveNames</string>
+    <string name="save_screen_title">New Name</string>
+    <string name="roster_screen_title">Saved Names</string>
 </resources>
