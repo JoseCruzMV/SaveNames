@@ -6,8 +6,9 @@
         <entry key="..\:/Users/josec/AndroidStudioProjects/SaveNames/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/josec/AndroidStudioProjects/SaveNames/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/josec/AndroidStudioProjects/SaveNames/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/josec/AndroidStudioProjects/SaveNames/app/src/main/res/layout/roster_fragment_layout.xml" value="0.1" />
-        <entry key="..\:/Users/josec/AndroidStudioProjects/SaveNames/app/src/main/res/layout/save_fragment_layout.xml" value="0.5" />
+        <entry key="..\:/Users/josec/AndroidStudioProjects/SaveNames/app/src/main/res/layout/roster_fragment_layout.xml" value="0.22" />
+        <entry key="..\:/Users/josec/AndroidStudioProjects/SaveNames/app/src/main/res/layout/roster_names_item.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/josec/AndroidStudioProjects/SaveNames/app/src/main/res/layout/save_fragment_layout.xml" value="0.1694915254237288" />
         <entry key="..\:/Users/josec/AndroidStudioProjects/SaveNames/app/src/main/res/menu/botton_nav_menu.xml" value="0.1" />
       </map>
     </option>
