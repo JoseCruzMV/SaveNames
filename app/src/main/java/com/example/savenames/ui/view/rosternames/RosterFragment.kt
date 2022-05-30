@@ -1,4 +1,4 @@
-package com.example.savenames.ui.rosternames
+package com.example.savenames.ui.view.rosternames
 
 import androidx.fragment.app.Fragment
 import com.example.savenames.R

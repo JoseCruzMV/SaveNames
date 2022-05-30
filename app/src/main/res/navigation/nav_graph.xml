@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/saveScreen"
-        android:name="com.example.savenames.ui.savename.SaveFragment"
+        android:name="com.example.savenames.ui.view.savename.SaveFragment"
         android:label="@string/save_screen_title" >
         <action
             android:id="@+id/fromSaveToRoster"
@@ -14,6 +14,6 @@
     </fragment>
     <fragment
         android:id="@+id/rosterScreen"
-        android:name="com.example.savenames.ui.rosternames.RosterFragment"
+        android:name="com.example.savenames.ui.view.rosternames.RosterFragment"
         android:label="@string/roster_screen_title" />
 </navigation>

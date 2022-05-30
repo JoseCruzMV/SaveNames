@@ -1,4 +1,4 @@
-package com.example.savenames.ui.savename
+package com.example.savenames.ui.view.savename
 
 import androidx.fragment.app.Fragment
 import com.example.savenames.R
