@@ -34,7 +34,10 @@ class RosterRowHolder(
     fun bind(givenName: Name) =
         binding.apply {
             itemName.text = givenName.name
-            root.setOnClickListener { onRowClick(givenName) }
+            root.setOnLongClickListener {
+                onRowClick(givenName)
+                true
+            }
         }
 }
 
