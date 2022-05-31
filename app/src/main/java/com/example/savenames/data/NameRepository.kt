@@ -10,8 +10,12 @@ import javax.inject.Inject
 class NameRepository @Inject constructor(
     private val nameDao: NameDao
 ) {
-    suspend fun insertName(name: Name) = nameDao.insertName(name.toDataBase())
+    suspend fun insertName(name: Name) =
+        nameDao.insertName(name.toDataBase())
 
     suspend fun getAllNames(): List<Name> =
         nameDao.getAllNames().map { it.toDomain() }
+
+    suspend fun deleteName(query: Name) =
+        nameDao.deleteName(query.name)
 }

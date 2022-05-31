@@ -6,16 +6,19 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.savenames.databinding.RosterNamesItemBinding
+import com.example.savenames.domain.model.Name
 
 
 class NamesRosterAdapter(
     private val inflater: LayoutInflater,
-) : ListAdapter<String, RosterRowHolder>(DIffCallBack) {
+    private val onRowClick: (Name) -> Unit,
+) : ListAdapter<Name, RosterRowHolder>(DIffCallBack) {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ) = RosterRowHolder(
-        RosterNamesItemBinding.inflate(inflater, parent, false)
+        RosterNamesItemBinding.inflate(inflater, parent, false),
+        onRowClick = onRowClick
     )
 
     override fun onBindViewHolder(holder: RosterRowHolder, position: Int) {
@@ -26,14 +29,19 @@ class NamesRosterAdapter(
 
 class RosterRowHolder(
     private val binding: RosterNamesItemBinding,
+    val onRowClick: (Name) -> Unit,
 ) : RecyclerView.ViewHolder(binding.root) {
-    fun bind(name: String) = binding.apply { itemName.text = name }
+    fun bind(givenName: Name) =
+        binding.apply {
+            itemName.text = givenName.name
+            root.setOnClickListener { onRowClick(givenName) }
+        }
 }
 
-private object DIffCallBack: DiffUtil.ItemCallback<String>() {
-    override fun areContentsTheSame(oldItem: String, newItem: String) =
-        oldItem == newItem
+private object DIffCallBack : DiffUtil.ItemCallback<Name>() {
+    override fun areContentsTheSame(oldItem: Name, newItem: Name) =
+        oldItem.name == newItem.name
 
-    override fun areItemsTheSame(oldItem: String, newItem: String) =
-        oldItem == newItem
+    override fun areItemsTheSame(oldItem: Name, newItem: Name) =
+        oldItem.name == newItem.name
 }

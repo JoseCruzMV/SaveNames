@@ -1,9 +1,6 @@
 package com.example.savenames.data.database.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.savenames.data.database.entities.NameEntity
 
 @Dao
@@ -14,4 +11,7 @@ interface NameDao {
 
     @Query("SELECT * FROM name_table")
     suspend fun getAllNames(): List<NameEntity>
+
+    @Query("DELETE FROM name_table WHERE name = :name")
+    suspend fun deleteName(name: String)
 }
