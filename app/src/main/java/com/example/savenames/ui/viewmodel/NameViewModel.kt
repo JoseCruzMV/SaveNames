@@ -28,7 +28,11 @@ class NameViewModel @Inject constructor(
     fun getAllNames() {
         viewModelScope.launch {
             val result = getAllNamesUseCase()
-            if (!result.isNullOrEmpty()) namesList.postValue(result)
+            if (!result.isNullOrEmpty()) {
+                namesList.postValue(result)
+            } else {
+                namesList.postValue(emptyList())
+            }
         }
     }
 

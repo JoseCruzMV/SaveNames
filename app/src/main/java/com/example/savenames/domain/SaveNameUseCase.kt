@@ -8,5 +8,5 @@ class SaveNameUseCase @Inject constructor(
     private val repository: NameRepository
 ) {
     suspend operator fun invoke(query: String) =
-        repository.insertName(Name(query))
+        repository.insertName(Name(name = query))
 }

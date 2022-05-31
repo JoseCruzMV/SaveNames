@@ -12,6 +12,6 @@ interface NameDao {
     @Query("SELECT * FROM name_table")
     suspend fun getAllNames(): List<NameEntity>
 
-    @Query("DELETE FROM name_table WHERE name = :name")
-    suspend fun deleteName(name: String)
+    @Query("DELETE FROM name_table WHERE id = :name")
+    suspend fun deleteName(name: Int)
 }
