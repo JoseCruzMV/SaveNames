@@ -29,6 +29,7 @@ class SaveFragment : Fragment(R.layout.save_fragment_layout) {
         binding.apply {
             bSave.setOnClickListener {
                 nameViewModel.saveName(etName.text.toString())
+                etName.text.clear()
             }
         }
     }

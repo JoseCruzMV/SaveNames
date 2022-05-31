@@ -42,7 +42,7 @@ class RosterFragment : Fragment(R.layout.roster_fragment_layout) {
 
         nameViewModel.getAllNames()
 
-        nameViewModel.namesList.observe(viewLifecycleOwner){ currentNamesList ->
+        nameViewModel.namesList.observe(viewLifecycleOwner) { currentNamesList ->
             adapter.submitList(currentNamesList.map { it.name })
         }
     }
