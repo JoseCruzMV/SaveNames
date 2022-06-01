@@ -28,8 +28,8 @@ class SaveFragment : Fragment(R.layout.save_fragment_layout) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
             bSave.setOnClickListener {
-                nameViewModel.saveName(etName.text.toString())
-                etName.text.clear()
+                nameViewModel.saveName(etName.editText?.text.toString())
+                etName.editText?.text?.clear()
             }
         }
     }
