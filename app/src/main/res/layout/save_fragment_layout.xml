@@ -22,13 +22,13 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/et_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:hint="@string/edit_text_hint"
         app:layout_constraintEnd_toStartOf="@id/b_save"
         app:layout_constraintStart_toStartOf="parent"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintTop_toBottomOf="@id/textView">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -41,6 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
+        android:insetBottom="0dp"
         android:text="@string/button_save"
         app:layout_constraintBottom_toBottomOf="@id/et_name"
         app:layout_constraintEnd_toEndOf="parent"
